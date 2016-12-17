@@ -96,4 +96,10 @@
         android:text="Query"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="insert"
+        android:text="Insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

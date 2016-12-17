@@ -12,6 +12,8 @@ import java.util.List;
 import chou.aric.com.mydao.dbutils.DBHelper;
 import chou.aric.com.mydao.dbutils.Father;
 import chou.aric.com.mydao.dbutils.Son;
+import chou.aric.com.mysqlitedatabase.MyDbManager;
+import chou.aric.com.mysqlitedatabase.Student;
 
 public class FlashActivity extends AppCompatActivity {
     private static final String TAG = "FlashActivity";
@@ -53,6 +55,11 @@ public class FlashActivity extends AppCompatActivity {
     public void query(View view){
         Son son = DBHelper.querySonByName(query_input.getText().toString());
         Toast.makeText(this, son.toString(), Toast.LENGTH_SHORT).show();
+    }
+
+    public void insert(View view){
+        Student student= new Student(14,"zhouhaifeng");
+        MyDbManager.insertSingle(student);
     }
 
     public void addData(View view) {
